@@ -1,0 +1,33 @@
+.before-after {
+  outline: @outline-width solid @outline-purple;
+  outline-offset: -(@outline-width);
+
+  &__images {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    padding: 0;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__toggler {
+    outline: @outline-width solid @outline-purple;
+    outline-offset: -(@outline-width);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__toggle {
+    width: 20px;
+    height: 10px;
+    background: @basic-green;
+  }
+}

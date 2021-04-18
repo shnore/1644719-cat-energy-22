@@ -1,0 +1,105 @@
+.features {
+  outline: @outline-width solid @outline-blue;
+  outline-offset: -(@outline-width);
+
+  &__container {
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 38px;
+    padding-bottom: 42px;
+  }
+
+  &__header {
+    margin: 0;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-left: 80px;
+    margin-bottom: 20px;
+    position: relative;
+
+    p {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: @special_dark-grey;
+    }
+
+    ::before {
+      content: "";
+      position: absolute;
+      left: -80px;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      padding-left: 20px;
+      background-image: url("../img/green-back_1.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--leaf::before {
+      content: "";
+      position: absolute;
+      left: -65px;
+      z-index: 100;
+      top: 15px;
+      width: 30px;
+      height: 30px;
+      background-image: url("../img/icon_leaf.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &--tub::before {
+      content: "";
+      position: absolute;
+      left: -65px;
+      z-index: 100;
+      top: 15px;
+      width: 30px;
+      height: 30px;
+      background-image: url("../img/icon_tub.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &--eat::before {
+      content: "";
+      position: absolute;
+      left: -65px;
+      z-index: 100;
+      top: 15px;
+      width: 30px;
+      height: 30px;
+      background-image: url("../img/icon_eat.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &--alarm::before {
+      content: "";
+      position: absolute;
+      left: -65px;
+      z-index: 100;
+      top: 15px;
+      width: 30px;
+      height: 30px;
+      background-image: url("../img/icon_alarm.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
