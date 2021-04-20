@@ -3,18 +3,15 @@
   outline-offset: -(@outline-width);
 
   &__container {
-    margin: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    .container-base;
   }
 
   &__list {
-    padding: 0;
-    list-style: none;
+    .list-reset;
   }
 
   &__item {
-    background: @basic-grey;
+    background: @gray--lightest;
     margin-bottom: 20px;
     padding: 20px;
 
@@ -33,13 +30,13 @@
     p {
       margin: 0;
       padding-bottom: 23px;
-      font-family: "Arial", sans-serif;
+      font-family: @special-font;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
       line-height: 18px;
-      color: @special_dark-grey;
-      border-bottom: 1px solid @special-light;
+      color: @gray--darken;
+      border-bottom: 1px solid @border-light;
     }
 
     a {
@@ -50,7 +47,7 @@
       text-align: center;
       text-transform: uppercase;
       text-decoration: none;
-      color: @black;
+      color: @text-black;
     }
   }
 }
