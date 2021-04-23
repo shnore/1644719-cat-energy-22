@@ -1,0 +1,29 @@
+.site-list {
+
+  .list-reset;
+  margin: 0;
+  font-family: @default-font;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  &__item {
+    padding: 0;
+    padding-top: 22px;
+    padding-bottom: 24px;
+    border-top: 1px solid @menu-border;
+    text-align: center;
+  }
+
+  &__item--active {
+    font-weight: bold;
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  a {
+    color: @text-black;
+    text-decoration: none;
+  }
+}

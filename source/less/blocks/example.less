@@ -1,0 +1,41 @@
+.example {
+  // outline: @outline-width solid @outline-red;
+  // outline-offset: -(@outline-width);
+  background: @example-background;
+
+  &__container {
+    .container-base;
+    padding-top: 27px;
+    padding-bottom: 39px;
+  }
+
+  h2 {
+    margin: 0;
+    padding-bottom: 33px;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  p {
+    margin: 0;
+    font-family: @special-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: @gray--darken;
+    padding-bottom: 25px;
+  }
+
+  p:nth-child(4) {
+    font-family: @default-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @text-black;
+  }
+}

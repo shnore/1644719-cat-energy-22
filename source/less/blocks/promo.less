@@ -1,0 +1,53 @@
+.promo {
+  // outline: @outline-width solid @outline-blue;
+  // outline-offset: -(@outline-width);
+
+  color: @text-white;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+
+  &__container {
+    .container-base;
+
+    background: url("../img/cat-mobile-green.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-height: 100%;
+    position: relative;
+
+    img {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      color: @text-white;
+      background-color: @basic-green;
+      font-size: 14px;
+      line-height: 18px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 7px 44px;
+      margin: 0 auto;
+    }
+  }
+
+  &__header {
+    margin: 0;
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 27px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+}
