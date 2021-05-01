@@ -1,0 +1,24 @@
+.block-title {
+  // outline: @outline-width solid @outline-green;
+  // outline-offset: -(@outline-width);
+
+  font-family: @default-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: capitalize;
+  color: @text-black;
+  display: flex;
+  justify-content: flex-end;
+  background-color: @text-white;
+  min-width: max-content;
+
+  &::after {
+    content: "";
+    margin-left: 20px;
+    min-width: 100vw;
+    height: 15px;
+    border-bottom: 2px solid @basic-green;
+  }
+}

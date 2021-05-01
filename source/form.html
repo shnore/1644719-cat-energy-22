@@ -10,16 +10,17 @@
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo">
+    <a class="page-header__logo" href="index.html">
       <img class="page-header__logo-picture" src="img/logo-mobile.svg" width="34" height="38"
         alt="Изображение логотипа Кэт энерджи">
       <img class="page-header__logo-name" src="img/logo-cat-energy.svg" width="101" height="18"
         alt="Текст логотипа Кэт энерджи">
     </a>
+    <button class="page-header__menu-toggle page-header__menu-toggle--close" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+  </header>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
       <div class="main-nav__container">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -34,12 +35,10 @@
         </ul>
       </div>
     </nav>
-  </header>
-
   <main class="page-form">
     <h1 class="page-block-title">Подбор программы</h1>
     <form class="form" method="get" action="https://echo.htmlacademy.ru">
-      <h2 class="form__title block-title">Заполните анкету, и мы подберем
+      <h2 class="form__subtitle">Заполните анкету, и мы подберем
         программу питания для вашего кота</h2>
 
       <fieldset class="form__main-data">
@@ -83,7 +82,7 @@
       </fieldset>
 
       <fieldset class="form__contacts">
-        <legend class="form__title block-title">Контактные данные
+        <legend class="form__title block-title">Контактные данные<br>
           (владельца кота)</legend>
         <ul class="form__input-list">
           <li class="form__input-list-item">
@@ -118,7 +117,7 @@
 
       <fieldset class="form__comment">
         <legend class="form__title block-title">Комментарий</legend>
-        <textarea class="form__comment-multiline" name="comment" id="comment" rows="5">Расскажите обо всех повАдках кота</textarea>
+        <textarea class="form__comment-multiline" name="comment" id="comment" rows="5" placeholder="Расскажите обо всех повАдках кота"></textarea>
       </fieldset>
 
       <fieldset class="form__additional">
@@ -151,7 +150,7 @@
 
     <section class="contacts">
       <h2 class="visually-hidden">Как нас найти?</h2>
-      <div class="contacts__container">
+      <div class="contacts__container contacts__container--gray">
         <header class="contacts__header">
           <p class="contacts__header-title">приглашаем
             к сотрудничеству дилеров!</p>
@@ -159,9 +158,9 @@
             Конюшенная, д. 19/8
             Санкт-Петербург</p>
         </header>
-        <div class="contacts__map">
-          <div class="contacts__map-pin"></div>
-        </div>
+      </div>
+      <div class="contacts__map">
+        <div class="contacts__map-pin"></div>
       </div>
     </section>
 
@@ -174,14 +173,19 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Мы в Вконтакте</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
-              Инстаграме</a>
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+              <span class="visually-hidden">Мы в Инстаграме</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+            </a>
           </li>
         </ul>
       </div>

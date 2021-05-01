@@ -1,0 +1,99 @@
+.form {
+  // outline: @outline-width solid @outline-green;
+  // outline-offset: -(@outline-width);
+
+  font-family: @default-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @gray--darken;
+
+  &__main-data {
+    border: none;
+    border-bottom: 1px solid @border-light;
+    .container-wide;
+  }
+
+  &__title {
+    padding-left: 20px;
+    padding-top: 22px;
+  }
+
+  &__subtitle {
+    .container-base;
+    font-weight: normal;
+    font-size: 14px;
+    color: @text-black;
+    margin-top: 37px;
+    margin-bottom: 39px;
+  }
+
+  &__input-list {
+    .list-reset;
+    .container-base;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__radio-list {
+    .list-reset;
+    .container-base;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__select-program {
+    border: none;
+    .container-wide;
+    border-bottom: 1px solid @border-light;
+  }
+
+  &__contacts {
+    border: none;
+    .container-wide;
+  }
+
+  &__comment {
+    border: none;
+    .container-wide;
+    padding-top: 20px;
+  }
+
+  &__comment-multiline {
+    border: 1px solid @border-light;
+    font-family: @default-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+    max-width: 50%;
+  }
+
+  &__additional {
+    border: none;
+    .container-wide;
+  }
+
+  &__submit {
+    margin: 0 20px;
+  }
+
+  &__note {
+    font-family: @special-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: @text-black;
+    text-transform: none;
+  }
+}

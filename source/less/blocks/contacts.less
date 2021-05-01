@@ -6,6 +6,10 @@
     .container-base;
     padding-top: 28px;
     padding-bottom: 26px;
+
+    &--gray {
+      background-color: @gray--lightest;
+    }
   }
 
   &__header {
@@ -13,7 +17,7 @@
     font-weight: normal;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
   }
 
   &__header-title {
@@ -35,6 +39,7 @@
     font-size: 14px;
     line-height: 20px;
     color: @gray--darken;
+    margin-left: 20px;
   }
 
   &__map {
