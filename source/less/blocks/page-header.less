@@ -1,6 +1,7 @@
 .page-header {
   // outline: @outline-width solid @outline-bordo;
   // outline-offset: -(@outline-width);
+  border-bottom: 1px solid @menu-border;
   .container-base;
   padding-top: 11px;
   display: flex;
@@ -34,6 +35,12 @@
     background-image: url("../img/icon-hamburger-menu.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    &--close {
+      background-image: url("../img/icon-cross.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   &__menu-toggle:focus {
