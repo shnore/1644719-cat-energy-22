@@ -2,4 +2,48 @@
   // outline: @outline-width solid @outline-green;
   outline-offset: -(@outline-width);
   margin: 7px auto;
+
+  &--radio + label::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: -6px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @gray;
+    border-radius: 50%;
+  }
+
+  &--radio:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -33px;
+    width: 14px;
+    height: 14px;
+    background-color: @basic-green;
+    border-radius: 50%;
+  }
+
+  &--checkbox + label::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: -6px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @gray;
+  }
+
+  &--checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -35px;
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/checkbox-green-mark.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
