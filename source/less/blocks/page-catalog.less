@@ -3,7 +3,31 @@
   // outline-offset: -(@outline-width);
 
   &__block-title {
+    padding-top: 22px;
     padding-left: 20px;
+    padding-bottom: 35px;
+    overflow: hidden;
+    display: table;
+    white-space: nowrap;
+
+    &::before {
+      border-top: 2px solid @basic-green;
+      content: "";
+      display: table-cell;
+      position: relative;
+      top: 0.5em;
+      width: 0%;
+    }
+
+    &::after {
+      border-top: 2px solid @basic-green;
+      content: "";
+      display: table-cell;
+      position: relative;
+      top: 0.5em;
+      left: 20px;
+      width: 100%;
+    }
   }
 
   &__header {
