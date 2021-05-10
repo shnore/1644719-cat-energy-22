@@ -1,0 +1,20 @@
+.catalog-list {
+  // outline: @outline-width solid @outline-green;
+  // outline-offset: -(@outline-width);
+  .list-reset;
+  border-bottom: 1px solid @border-light;
+
+  &__item {
+    .container-wide;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid @border-light;
+  }
+
+  &__item:last-child > .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}

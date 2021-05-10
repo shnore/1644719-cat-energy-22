@@ -9,8 +9,10 @@
 
   &__container {
     .container-base;
-
-    background: url("../img/cat-mobile-green.png");
+    --gradient-break: calc(100% - 302px);
+    height: 302px;
+    background-image: url("../img/cat-mobile-green.png"),
+      linear-gradient(to top, #ffffff var(--gradient-break), #60a835 var(--gradient-break));
     background-position: top center;
     background-repeat: no-repeat;
     background-size: contain;
