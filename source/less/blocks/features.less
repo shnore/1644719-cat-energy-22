@@ -1,50 +1,146 @@
 .features {
   // outline: @outline-width solid @outline-blue;
   // outline-offset: -(@outline-width);
+  // .container-wide;
+  max-width: 1440px;
+  margin: 0 auto;
 
   &__container {
     .container-base;
-    padding-top: 38px;
-    padding-bottom: 42px;
+    margin-top: 7px;
+    margin-bottom: 26px;
+    // padding-left: 20px;
+    // padding-right: 20px;
+
+
+    @media (min-width: @tablet) {
+      border-bottom: 1px solid @border-light;
+      // .container-base;
+      // padding: 0;
+      // padding-right: 30px;
+      // padding-left: 30px;
+      padding-bottom: 56px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @desktop) {
+      border-style: none;
+      // margin: 0;
+    }
   }
 
   &__header {
-    margin: 0;
     font-weight: normal;
     font-size: 36px;
     line-height: 40px;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 38px;
+    max-width: 1220px;
+    text-align: left;
+
+    @media (min-width: @tablet) {
+      font-weight: normal;
+      font-size: 60px;
+      line-height: 60px;
+      padding: 0;
+      padding-bottom: 72px;
+      width: 1440px;
+    }
   }
 
   &__list {
     .list-reset;
+    margin: 0;
+    color: @gray--darken;
+    display: flex;
+    flex-direction: column;
+    font-family: @special-font;
+    justify-content: space-between;
+    counter-reset: section;
+
+    @media (min-width: @tablet) {
+      width: 82vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 135px;
+      row-gap: 90px;
+    }
+
+    @media (min-width: @desktop) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 4vw;
+    }
   }
 
   &__item {
-    margin-left: 80px;
-    margin-bottom: 20px;
+    // margin-left: 80px;
+    // margin-bottom: 20px;
+    display: flex;
     position: relative;
 
-    p {
-      margin: 0;
-      font-family: @special-font;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 18px;
-      color: @gray--darken;
+    @media (min-width: @tablet) {
+      font-family: @default-font;
+      font-size: 16px;
+      line-height: 24px;
+      flex-direction: column;
+      padding-left: 0;
+
+      &::before {
+        font-size: 280px;
+        line-height: 280px;
+        color: @gray--lightest;
+        position: absolute;
+        counter-increment: section;
+        content: counter(section);
+        z-index: -1;
+        top: -38px;
+        left: 118px;
+      }
+    }
+  }
+
+  &__text {
+    margin: 0;
+    width: 199px;
+    font-family: @special-font;
+    padding-left: 20px;
+    min-height: 54px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+
+    @media (min-width: @tablet) {
+      font-size: 16px;
+      line-height: 24px;
+      padding-top: 31px;
+      padding-left: 0;
+      padding-bottom: 44px;
+      width: 230px;
     }
 
-    ::after {
-      content: "";
-      position: absolute;
-      left: -80px;
-      top: 0;
-      width: 40px;
-      height: 60px;
-      padding-left: 20px;
-      background-color: @basic-green;
-      background-repeat: no-repeat;
-      background-position: 0 0;
+    @media (min-width: @desktop) {
+      width: 245px;
+    }
+  }
+
+  &__icon-wrapper {
+    background-color: @basic-green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet) {
+      width: 80px;
+      height: 80px;
+      margin: 0;
     }
 
     &--leaf::after {
@@ -56,45 +152,6 @@
       width: 30px;
       height: 30px;
       background-image: url("../img/icon_leaf.svg");
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-
-    &--tub::after {
-      content: "";
-      position: absolute;
-      left: -65px;
-      z-index: 100;
-      top: 15px;
-      width: 30px;
-      height: 30px;
-      background-image: url("../img/icon_tub.svg");
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-
-    &--eat::after {
-      content: "";
-      position: absolute;
-      left: -65px;
-      z-index: 100;
-      top: 15px;
-      width: 30px;
-      height: 30px;
-      background-image: url("../img/icon_eat.svg");
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-
-    &--alarm::after {
-      content: "";
-      position: absolute;
-      left: -65px;
-      z-index: 100;
-      top: 15px;
-      width: 30px;
-      height: 30px;
-      background-image: url("../img/icon_alarm.svg");
       background-repeat: no-repeat;
       background-position: center center;
     }

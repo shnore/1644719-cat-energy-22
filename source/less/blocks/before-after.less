@@ -2,32 +2,196 @@
   outline: @outline-width solid @outline-purple;
   outline-offset: -(@outline-width);
 
-  &__images {
+  @media (min-width: @desktop) {
+    align-items: flex-end;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    z-index: 0;
+  }
+}
+
+.before-after__container {
+  padding: 0 0 30px;
+
+  @media (min-width: @tablet) {
+    padding: 0 0 67px;
   }
 
-  p {
-    padding: 0;
-    font-family: @default-font;
-    font-weight: normal;
-    font-size: 16px;
+  @media (min-width: @desktop) {
+    margin-right: auto;
+    padding: 0 0 64px;
+  }
+}
+
+.before-after__button {
+  background-color: inherit;
+  font-family: @default-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  border-style: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0 0 6px;
+
+  &:hover {
+    border-bottom: 1px solid rgba(@text-black, 0.4);
+  }
+
+  &:active,
+  &:focus {
+    border-color: transparent;
+    outline: none;
+  }
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
     line-height: 20px;
-    text-align: center;
-    text-transform: uppercase;
+    border-bottom: 1px dotted @gray;
+    padding: 0 0 6px;
   }
+}
 
-  &__toggler {
-    outline: @outline-width solid @outline-purple;
-    outline-offset: -(@outline-width);
+.before-after__list {
+  .list-reset;
+  padding-bottom: 23px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet) {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    max-width: 708px;
+    justify-content: center;
+    margin: 0 auto 0;
   }
 
-  &__toggle {
-    width: 20px;
-    height: 10px;
-    background: @basic-green;
+  @media (min-width: @desktop) {
+    min-width: 640px;
+    margin: 0;
+  }
+}
+
+.before-after__item {
+  display: none;
+
+  &--active {
+    display: block;
+    text-align: center;
+  }
+
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 50%;
+    z-index: 2;
+  }
+
+  @media (min-width: @desktop) {
+    width: 53%;
+  }
+
+  &:nth-child(2) {
+    @media (min-width: @tablet) {
+      flex-direction: row-reverse;
+      width: 43%;
+      z-index: 1;
+    }
+
+    @media (min-width: @desktop) {
+      width: 40%;
+    }
+  }
+}
+
+.before-after__bar {
+  @media (max-width: @mobile-only) {
+    background-color: @basic-green;
+    border-radius: 6px;
+    height: 6px;
+    margin-top: 4px;
+    width: 35px;
+
+    &--before {
+      margin-left: 6px;
+    }
+
+    &--after {
+      float: right;
+      margin-right: 6px;
+    }
+  }
+}
+
+.before-after__toggle {
+  box-shadow: 0 1px 3px rgba(@text-black, 0.16);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(@text-black, 0.16);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(@text-black, 0.16);
+  }
+
+  &-circle:active {
+    stroke: @basic-green;
+  }
+
+  @media (max-width: @mobile-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet) {
+    display: block;
+    position: absolute;
+    left: calc(50% - 17px);
+    top: -16px;
+  }
+}
+
+.before-after__image {
+  text-align: center;
+  display: inline-block;
+  width: auto;
+
+  @media (min-width: @tablet) {
+    height: 530px;
+    margin-left: 0;
+  }
+}
+
+
+.before-after__range-wrapper {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @desktop) {
+    max-width: 640px;
+  }
+}
+
+.before-after__scale {
+  background-color: @text-white;
+  border: 1px solid @gray;
+  border-radius: 6px;
+  height: 14px;
+  margin: 5px 12px;
+  position: relative;
+  width: 84px;
+
+  @media (min-width: @tablet) {
+    background-color: @gray;
+    border-style: none;
+    height: 6px;
+    width: 428px;
+    margin: 5px;
   }
 }

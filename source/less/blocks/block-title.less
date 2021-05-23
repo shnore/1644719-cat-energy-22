@@ -1,12 +1,36 @@
 .block-title {
-  // outline: @outline-width solid @outline-green;
-  // outline-offset: -(@outline-width);
+  position: relative;
 
-  font-family: @default-font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 26px;
-  text-transform: none;
-  color: @text-black;
+  @media (min-width: @tablet) {
+    margin-top: 6px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 8px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: @basic-green;
+
+    @media (min-width: @tablet) {
+      top: 22px;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: @tablet) {
+      margin-top: 18px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-top: 14px;
+    }
+  }
 }

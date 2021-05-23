@@ -1,18 +1,25 @@
 .button {
-  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  border-style: none;
   box-sizing: border-box;
-  display: block;
-  color: @text-white;
   background-color: @basic-green;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
+  color: @text-white;
+  cursor: pointer;
+  font-family: @default-font;
+  padding: 10px 0 10px;
   text-decoration: none;
-  padding: 7px auto;
-  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 
-  &--light {
-    color: @gray--darken;
-    background-color: @gray--lightest;
+  &:hover {
+    background-color: @special-green;
+  }
+
+  &:active {
+    color: @text-white-opaque-30;
+    outline: none;
   }
 }
